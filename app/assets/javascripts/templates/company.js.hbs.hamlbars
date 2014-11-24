@@ -1,0 +1,7 @@
+%h1 {{model.name}}
+%p
+  Who we are:
+  {{model.name}}
+%p
+  What we do:
+  {{model.description}}

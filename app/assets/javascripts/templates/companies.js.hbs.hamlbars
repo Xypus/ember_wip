@@ -1,0 +1,10 @@
+%h1 Listing companies
+%table
+  %tr
+    %td
+      %ul
+        {{#each company in model}}
+        %li {{#link-to "company" company}}{{company.name}}{{/link-to}}
+        {{/each}}
+    %td 
+      {{outlet}}

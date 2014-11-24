@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
-  root 'companies#index'
+  namespace :api do
+    resources :companies
+  end
+
+  root to: 'assets#index'
   
   devise_for :users
   
-  resources :companies do
-    resources :projects
-  end
+   get '*path', to: 'assets#index'
 end

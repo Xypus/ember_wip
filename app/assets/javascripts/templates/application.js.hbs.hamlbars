@@ -1,0 +1,4 @@
+%h1 Generic hello-world-type greeting text
+
+{{outlet}}
+
