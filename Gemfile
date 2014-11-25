@@ -13,8 +13,8 @@ gem 'therubyracer', '~> 0.11.4', platforms: :ruby
 gem 'ffaker'
 gem 'figaro'
 gem 'ember-rails'
-gem 'ember-source', '1.4.0'
-gem 'ember-data-source', '1.0.0.beta.7'
+gem 'ember-source', '1.8.1'
+gem 'ember-data-source', '1.0.0.beta.11'
 gem 'hamlbars', '~> 2.1'
 gem 'active_model_serializers', '~> 0.9.0'
 

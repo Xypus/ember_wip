@@ -1,7 +1,14 @@
-%h1 {{model.name}}
+{{outlet}}
+
+{{#unless isEditing}}
+%h1 {{#link-to 'company.edit' model}}{{model.name}}{{/link-to}}
 %p
   Who we are:
   {{model.name}}
 %p
   What we do:
   {{model.description}}
+{{/unless}}
+
+
+

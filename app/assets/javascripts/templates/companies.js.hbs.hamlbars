@@ -1,10 +1,9 @@
 %h1 Listing companies
-%table
-  %tr
-    %td
-      %ul
-        {{#each company in model}}
-        %li {{#link-to "company" company}}{{company.name}}{{/link-to}}
-        {{/each}}
-    %td 
-      {{outlet}}
+{{#link-to 'companies.new'}}New company{{/link-to}}
+
+%ul
+  {{#each company in model}}
+  %li {{#link-to "company" company}}{{company.name}}{{/link-to}}
+  {{/each}}
+
+{{outlet}}

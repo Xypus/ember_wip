@@ -1,0 +1,17 @@
+%h1 New company
+
+%form
+  %fieldset
+    %dl
+      %dt Who we want to be:
+      %dd
+        {{view Ember.TextField value=fields.name}}
+
+    %dl
+      %dt What we want to do:
+      %dd
+        {{view Ember.TextField value=fields.description}}
+
+  %fieldset.actions
+
+    %input{:type => "submit", :value => "Create", :click =>"createCompany"}

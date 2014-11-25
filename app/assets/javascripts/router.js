@@ -1,6 +1,9 @@
 
 Ninja.Router.map(function() {
   this.resource('companies', { path: '/' }, function () {
-    this.resource('company', { path: '/companies/:id' });
+    this.route('new');
+    this.resource('company', { path: '/companies/:id' }, function () {
+      this.route('edit')
+    });
   })
 })

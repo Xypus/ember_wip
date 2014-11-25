@@ -1,0 +1,22 @@
+%h1 test {{model.name}}
+
+%form
+  %fieldset
+    %dl
+      %dt Who we are:
+      %dd
+        {{view Ember.TextField value=model.name}}
+
+    %dl
+      %dt What we do:
+      %dd
+        {{view Ember.TextField value=model.description}}
+
+  %fieldset.actions
+
+    %input{:type => "submit", :value => "Save Changes", :click =>"saveChanges"}
+
+    %a{:href => "#", :click => "cancel"} Cancel
+
+    %a{:href => "#", :click => "delete"} Delete
+
