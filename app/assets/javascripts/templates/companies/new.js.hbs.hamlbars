@@ -5,13 +5,13 @@
     %dl
       %dt Who we want to be:
       %dd
-        {{view Ember.TextField value=fields.name}}
+        {{input type="text" value=name}}
 
     %dl
       %dt What we want to do:
       %dd
-        {{view Ember.TextField value=fields.description}}
+        {{input type="text" value=description}}
 
   %fieldset.actions
 
-    %input{:type => "submit", :value => "Create", :click =>"createCompany"}
+    %button {{action 'showMessage'}}

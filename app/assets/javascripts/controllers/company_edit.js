@@ -8,10 +8,17 @@ Ninja.CompanyEditController = Ember.ObjectController.extend({
         self.transitionToRoute('company');
       })
     },
-
+  
     cancel: function() {
       this.get('model').rollback();
       this.transitionToRoute('company');
+    },
+
+    delete: function() {
+      var self = this;
+      this.get('model').destroyRecord().then(function() {
+        self.transitionToRoute('companies');
+      })
     }
   }
-})
+});

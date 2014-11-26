@@ -5,18 +5,20 @@
     %dl
       %dt Who we are:
       %dd
-        {{view Ember.TextField value=model.name}}
+        {{input type="text" value=model.name}}
 
     %dl
       %dt What we do:
       %dd
-        {{view Ember.TextField value=model.description}}
+        {{input type="text" value=model.description}}
 
   %fieldset.actions
 
-    %input{:type => "submit", :value => "Save Changes", :click =>"saveChanges"}
+    {{input type="submit" value="Save" action="saveChanges"}}
 
     %a{:href => "#", :click => "cancel"} Cancel
 
-    %a{:href => "#", :click => "delete"} Delete
+    %button {{action "delete" model}}
+
+   
 
