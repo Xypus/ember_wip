@@ -14,11 +14,8 @@
 
   %fieldset.actions
 
-    {{input type="submit" value="Save" action="saveChanges"}}
+  %button{ :_action => 'saveChanges'} Save
 
-    %a{:href => "#", :click => "cancel"} Cancel
+  %button{ :_action => 'cancel'} Cancel
 
-    %button {{action "delete" model}}
-
-   
-
+  %button{ :_action => 'delete'} Delete

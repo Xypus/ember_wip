@@ -8,8 +8,8 @@ Ninja.CompanyController = Ember.ObjectController.extend({
       var self = this;
       this.get('model').destroyRecord().then(function () {
         self.transitionToRoute('companies');
-      })
+      });
     }
   }
   
-})
+});

@@ -1,6 +1,6 @@
 DS.RESTAdapter.reopen({
   namespace: 'api'
-})
+});
 
 Ninja.ApplicationStore = DS.Store.extend({
 

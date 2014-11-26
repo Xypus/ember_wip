@@ -2,7 +2,7 @@
 {{#link-to 'companies.new'}}New company{{/link-to}}
 
 %ul
-  {{#each company in model}}
+  {{#each company in controller}}
   %li {{#link-to "company" company}}{{company.name}}{{/link-to}}
   {{/each}}
 

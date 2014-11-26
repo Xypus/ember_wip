@@ -14,4 +14,4 @@
 
   %fieldset.actions
 
-    %button {{action 'showMessage'}}
+    %button{ :_action => 'createCompany' } Create

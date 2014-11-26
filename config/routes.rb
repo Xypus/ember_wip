@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   namespace :api do
-    resources :companies
+    resources :companies do
+      resources :projects
+    end
   end
 
   root to: 'assets#index'
