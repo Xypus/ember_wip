@@ -28,7 +28,9 @@ class Api::CompaniesController < ApplicationController
   end
 
   def company_params
-    params.require(:company).permit(:name, :description)
+    params.require(:company).permit(:name, 
+                                    :description, 
+                         projects: [:name, :description, :company_id])
   end
 
 end

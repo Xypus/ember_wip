@@ -1,0 +1,17 @@
+%h1 New project
+
+%form
+  %fieldset
+    %dl
+      %dt What it's gonna be called:
+      %dd
+        {{input type="text" value=name}}
+
+    %dl
+      %dt What it's gonna be about:
+      %dd
+        {{input type="text" value=description}}
+
+  %fieldset.actions
+
+    %button{ :_action => 'createProject' } Create

@@ -1,0 +1,7 @@
+%h1 {{#link-to 'project.edit' model}}{{model.name}}{{/link-to}}
+%p
+  What's it called:
+  {{model.name}}
+%p
+  What's it about:
+  {{model.description}}

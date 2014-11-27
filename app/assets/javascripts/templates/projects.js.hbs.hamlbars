@@ -1,0 +1,16 @@
+%h1 {{company.name}}
+
+%table 
+  %tr
+    %th Our Projects:
+    %th What they are about:
+  {{#each project in projects}}
+  %tr
+    %td {{#link-to 'project' project}}{{project.name}}{{/link-to}}
+    %td {{project.description}}
+  {{/each}}
+
+%button{:_action => "back"} Back to company
+{{#link-to 'projects.new'}} Add new project {{/link-to}}
+
+{{outlet}}

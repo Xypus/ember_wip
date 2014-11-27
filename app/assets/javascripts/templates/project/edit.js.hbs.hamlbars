@@ -1,0 +1,21 @@
+%h1 {{model.name}}
+
+%form
+  %fieldset
+    %dl
+      %dt What it's called:
+      %dd
+        {{input type="text" value=model.name}}
+
+    %dl
+      %dt What it's about:
+      %dd
+        {{input type="text" value=model.description}}
+
+  %fieldset.actions
+
+  %button{ :_action => 'saveChanges'} Save
+
+  %button{ :_action => 'cancel'} Cancel
+
+  %button{ :_action => 'delete'} Delete

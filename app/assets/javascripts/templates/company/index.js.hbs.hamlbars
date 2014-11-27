@@ -1,0 +1,13 @@
+%h1 {{#link-to 'company.edit' model}}{{model.name}}{{/link-to}}
+%p
+  Who we are:
+  {{name}}
+%p
+  What we do:
+  {{description}}
+{{#link-to 'projects'}}Our projects{{/link-to}}
+
+{{outlet}}
+
+
+

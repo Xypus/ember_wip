@@ -1,23 +1,23 @@
-Ninja.CompanyEditController = Ember.ObjectController.extend({
+Ninja.ProjectEditController = Ember.ObjectController.extend({
   
   actions: {
 
     saveChanges: function() {
       var self = this;
       this.get('model').save().then(function() {
-        self.transitionToRoute('company');
+        self.transitionToRoute('project');
       });
     },
   
     cancel: function() {
       this.get('model').rollback();
-      this.transitionToRoute('company');
+      this.transitionToRoute('project');
     },
 
     delete: function() {
       var self = this;
       this.get('model').destroyRecord().then(function() {
-        self.transitionToRoute('companies');
+        self.transitionToRoute('company');
       });
     }
   }
