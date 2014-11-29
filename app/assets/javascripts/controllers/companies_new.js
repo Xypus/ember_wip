@@ -2,11 +2,6 @@ Ninja.CompaniesNewController = Ember.Controller.extend({
 
   actions: {
 
-    showMessage: function() {
-      alert('Message');
-      console.log('Message');
-    },
-
     createCompany: function() {
 
       var self = this;
@@ -17,10 +12,9 @@ Ninja.CompaniesNewController = Ember.Controller.extend({
       });
 
       company.save().then(function() {
-        consoleLog('Company created!');
         self.set('name', '');
         self.set('description', '');
-        self.transitionToRoute('company', company)
+        self.transitionToRoute('company', company);
       });
     }
   }

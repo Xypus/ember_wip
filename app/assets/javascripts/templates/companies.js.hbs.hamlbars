@@ -5,7 +5,7 @@
       {{#link-to 'companies.new'}}New company{{/link-to}}
       %ul
       {{#each company in controller}}
-      %li {{#link-to "company" company}}{{company.name}}{{company.id}}{{/link-to}}
+      %li {{#link-to "company" company}}{{company.name}}{{/link-to}}
       {{/each}}
 
     %td {{outlet}}

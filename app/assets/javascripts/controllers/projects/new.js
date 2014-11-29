@@ -1,4 +1,6 @@
-Ninja.ProjectNewController = Ember.Controller.extend({
+Ninja.ProjectsNewController = Ember.Controller.extend({
+
+  needs: "company",
 
   actions: {
 
@@ -6,16 +8,25 @@ Ninja.ProjectNewController = Ember.Controller.extend({
 
       var self = this;
 
+      var company = this.get('controllers.company').get('model');
+
       var project = this.store.createRecord('project', {
         name: this.get('name'),
         description: this.get('description')
       });
 
+      project.set('company', company);
+
       project.save().then(function() {
         self.set('name', '');
         self.set('description', '');
-        self.transitionToRoute('company', company);
+        self.transitionToRoute('projects');
       });
+    },
+
+    back: function() {
+      this.get('model').rollback();
+      this.transitionToRoute('projects');
     }
   }
 });

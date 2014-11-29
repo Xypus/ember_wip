@@ -1,7 +1,10 @@
-%h1 {{#link-to 'project.edit' model}}{{model.name}}{{/link-to}}
+%h1 {{model.name}}
 %p
   What's it called:
   {{model.name}}
 %p
   What's it about:
   {{model.description}}
+
+%button{:_action => "back"} Back to projects
+%button {{#link-to 'project.edit' model}} Edit{{/link-to}}

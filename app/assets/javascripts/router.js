@@ -11,4 +11,8 @@ Ninja.Router.map(function() {
       });
     });
   });
+
+  this.resource('users', { path: '/users' }, function() {
+    this.route('new');
+  });
 });

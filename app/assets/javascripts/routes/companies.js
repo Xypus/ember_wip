@@ -1,3 +1,3 @@
 Ninja.CompaniesRoute = Ember.Route.extend({
-  model: function() { return this.store.find('company') }
-})
+  model: function() { return this.store.find('company'); }
+});

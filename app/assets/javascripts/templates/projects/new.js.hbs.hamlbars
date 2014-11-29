@@ -15,3 +15,4 @@
   %fieldset.actions
 
     %button{ :_action => 'createProject' } Create
+    %button{:_action => 'back'} Back to projects
