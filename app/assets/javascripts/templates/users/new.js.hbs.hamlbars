@@ -1,0 +1,27 @@
+%h1 Sign up
+
+%form
+  %fieldset
+    %dl
+      %dt First name:
+      %dd
+        {{input type="text" value=firstName}}
+
+    %dl
+      %dt Last name:
+      %dd
+        {{input type="text" value=lastName}}
+
+    %dl
+      %dt E-mail:
+      %dd
+        {{input type="text" value=email}}
+
+    %dl
+      %dt Password:
+      %dd
+        {{input type="text" value=password}}
+
+  %fieldset.actions
+
+    %button{ :_action => 'signUp' } Sign up

@@ -1,4 +1,10 @@
-%h1 Generic hello-world-type greeting text
+%table
+  %tr
+    %td {{#link-to 'companies'}}Companies{{/link-to}}
+    %td &nbsp
+    %td {{#link-to 'users'}}Users{{/link-to}}
+    %td &nbsp
+    %td {{#link-to 'users.new'}}Sign up{{/link-to}}
 
 {{outlet}}
 

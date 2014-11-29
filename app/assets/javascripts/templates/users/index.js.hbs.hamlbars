@@ -1,0 +1,8 @@
+%table
+  %tr
+    %td
+      %h1 Listing users
+      %ul
+      {{#each user in controller}}
+      %li {{user.firstName}} {{user.lastName}}
+      {{/each}}

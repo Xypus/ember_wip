@@ -10,7 +10,7 @@ class Api::UsersController < ApplicationController
   end
 
   def create
-    respond_with :api, User.create(user)
+    respond_with :api, User.create(user_params)
   end
 
   def update

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :companies
     resources :projects
+    resources :users, only: [:index, :show, :create]
   end
 
   root to: 'assets#index'
