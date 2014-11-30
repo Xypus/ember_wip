@@ -17,15 +17,14 @@
 //= require handlebars
 //= require ember
 //= require ember-data
+//= require ember-devise-simple-auth/globals
 //= require_self
 //= require ./ninja
 
-// for more details see: http://emberjs.com/guides/application/
 window.Ninja = Ember.Application.create({
   LOG_TRANSITIONS: true,
   LOG_TRANSITIONS_INTERNAL: true,
   LOG_VIEW_LOOKUPS: true
 });
   
-
 //= require_tree .

@@ -70,6 +70,8 @@ GEM
       railties (>= 3.1)
     ember-source (1.8.1)
       handlebars-source (~> 1.0)
+    ember_devise_simple_auth (0.4.4)
+      devise (>= 3.0.0)
     erubis (2.7.0)
     execjs (2.2.2)
     factory_girl (4.5.0)
@@ -209,6 +211,7 @@ DEPENDENCIES
   ember-data-source (= 1.0.0.beta.11)
   ember-rails
   ember-source (= 1.8.1)
+  ember_devise_simple_auth
   factory_girl_rails
   ffaker
   figaro

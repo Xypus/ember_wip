@@ -1,10 +1,26 @@
-%table
-  %tr
-    %td {{#link-to 'companies'}}Companies{{/link-to}}
-    %td &nbsp
-    %td {{#link-to 'users'}}Users{{/link-to}}
-    %td &nbsp
-    %td {{#link-to 'users.new'}}Sign up{{/link-to}}
-
+.nav.navbar.navbar-default
+  .container
+    .navbar-header
+      .navbar-brand
+        {{#if currentUser}}
+        %span.text-danger Hello, {{currentUser.firstName}}!
+        {{else}} 
+        %span.text-danger NINJA!
+        {{/if}}
+    .collapse.navbar-collapse
+      .navbar-left
+        %ul.nav.navbar-nav
+          {{#if currentUser}}
+          %li {{#link-to 'companies'}}Companies{{/link-to}}
+          %li {{#link-to 'users'}}Users{{/link-to}}
+          {{/if}}
+      .navbar-right
+        .nav.navbar-nav
+          {{#if currentUser}}
+          %button.btn.btn-link.navbar-btn{:_action => 'signOut'} Sign out
+          {{else}}
+          %li {{#link-to 'users.new'}}Sign up{{/link-to}}
+          %li {{#link-to 'session'}}Sign in{{/link-to}}
+          {{/if}}
 {{outlet}}
 

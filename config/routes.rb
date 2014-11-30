@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  devise_scope :user do
+    get "/sessions/current" => "ember_devise_simple_auth/sessions#show"
+  end
+
   namespace :api do
     resources :companies
     resources :projects
@@ -8,7 +12,7 @@ Rails.application.routes.draw do
 
   root to: 'assets#index'
   
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'ember_devise_simple_auth/sessions' }
   
-   get '*path', to: 'assets#index'
+  get '*path', to: 'assets#index'
 end

@@ -17,6 +17,7 @@ gem 'ember-source', '1.8.1'
 gem 'ember-data-source', '1.0.0.beta.11'
 gem 'hamlbars', '~> 2.1'
 gem 'active_model_serializers', '~> 0.9.0'
+gem 'ember_devise_simple_auth'
 
 gem 'rails_12factor', group: :production
 
