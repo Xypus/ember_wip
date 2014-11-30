@@ -15,9 +15,10 @@
           %li {{#link-to 'users'}}Users{{/link-to}}
           {{/if}}
       .navbar-right
-        .nav.navbar-nav
+        %ul.nav.navbar-nav
           {{#if currentUser}}
-          %button.btn.btn-link.navbar-btn{:_action => 'signOut'} Sign out
+          %li
+            %button.btn.btn-link.navbar-btn{:_action => 'signOut', :style => "text-decoration:none"} Sign out
           {{else}}
           %li {{#link-to 'users.new'}}Sign up{{/link-to}}
           %li {{#link-to 'session'}}Sign in{{/link-to}}

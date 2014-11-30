@@ -19,7 +19,7 @@ Ninja.UsersNewController = Ember.Controller.extend({
         self.set('lastName', '');
         self.set('email', '');
         self.set('password', '');
-        self.transitionToRoute('companies');
+        self.transitionTo('companies');
       });
     }
   }

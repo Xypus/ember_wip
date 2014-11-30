@@ -11,6 +11,8 @@ Ninja.CompaniesNewController = Ember.Controller.extend({
         description: this.get('description')
       });
 
+      company.set('user', currentUser);
+
       company.save().then(function() {
         self.set('name', '');
         self.set('description', '');
